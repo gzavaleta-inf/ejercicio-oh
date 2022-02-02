@@ -1,0 +1,26 @@
+<div class="content" role="main">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-sm-4" >
+        <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" [(ngModel)]="fechaInicio">
+      </div>
+      <div class="col-sm-4" >
+        <input type="date" class="form-control" id="fechaFin" name="fechaFin" [(ngModel)]="fechaFin">
+      </div>
+      <div class="col-sm-3">
+        <button class="btn btn-primary" (click)="buscarVentas()">Buscar</button>
+      </div>
+    </div>
+
+    <div class="row">      
+      <div class="list-group" class="col-sm"> 
+        <ul>
+          <li *ngFor="let venta of listaVentas" class="list-group-item">
+            {{venta.id}} - {{venta.idCliente}} - {{venta.fecha}}     
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
